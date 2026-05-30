@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Workspace - 실시간 협업 드로잉</title>
+    
+    <meta name="naver-site-verification" content="여기에_발급받은_코드를_넣으세요" />
+    
+    <style>
+        :root {
+            --color-primary: #facc15;
+            --color-primary-hover: #eab308;
+            --color-text-main: #0f172a;
+            --color-text-muted: #64748b;
+            --bg-base: #fefce8;
+            --bg-surface: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg-surface);
+            color: var(--color-text-main);
+            line-height: 1.6;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            background-color: var(--bg-surface);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-launch {
+            background-color: var(--color-text-main);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        
+        .btn-launch:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        /* 메인 배너 (히어로 섹션) */
+        .hero {
+            background-color: var(--bg-base);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 2px solid #fef08a;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: #b45309;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .hero .cta-btn {
+            background-color: var(--color-primary);
+            color: var(--color-text-main);
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .hero .cta-btn:hover {
+            background-color: var(--color-primary-hover);
+            transform: scale(1.05);
+        }
+
+        /* 주요 기능 섹션 */
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-surface);
+            padding: 40px;
+            border-radius: 24px;
+            border: 2px solid #e2e8f0;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: var(--color-text-main);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#facc15" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></header>
+        </div>
+        <a href="https://jini5098.github.io/Canvas/" class="btn-launch">웹에서 앱 실행하기</a>
+    </header>
+
+    <section class="hero">
+        <h1>우리의 아이디어가 모이는 <span>라이브 캔버스</span></h1>
+        <p>설치 없이 웹에서 바로! 형광펜, 네온펜 등 다채로운 도구로 실시간 드로잉과 채팅을 동시에 즐겨보세요.</p>
+        <a href="https://jini5098.github.io/Canvas/" class="cta-btn">무료로 워크스페이스 시작하기 ➔</a>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">모든 협업을 완벽하게 지원합니다</h2>
+        <div class="feature-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>강력한 드로잉 툴</h3>
+                <p>일반 펜, 형광펜, 빛나는 네온펜 등 5가지의 브러쉬와 무한한 색상으로 여러분만의 다채로운 작품을 완성하세요.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>0.1초 실시간 동기화</h3>
+                <p>지연 없는 실시간 연결! 친구가 그리는 선과 움직이는 마우스 커서를 끊김 없이 실시간으로 볼 수 있습니다.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>채팅과 이모지 리액션</h3>
+                <p>단순한 그리기를 넘어 우측 채팅창으로 소통하고, 화면에 둥둥 떠오르는 이모지 리액션으로 감정을 표현하세요.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗣️</div>
+                <h3>커뮤니티 광장</h3>
+                <p>앱 내부의 게시판을 통해 다른 사용자들과 아이디어를 나누고 피드백을 주고받을 수 있습니다.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>프라이빗 룸 지원</h3>
+                <p>공개 세션방뿐만 아니라, 비밀번호가 걸린 비공개 룸을 만들어 우리만의 안전한 공간을 확보할 수 있습니다.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>앱(PWA) 설치 지원</h3>
+                <p>스마트폰 바탕화면에 직접 앱을 설치하여 언제 어디서나 독립된 앱처럼 빠르고 쾌적하게 실행할 수 있습니다.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Live Workspace. All rights reserved.</p>
+        <p style="color: #94a3b8; font-size: 13px; margin-top: 10px;">Powered by Supabase & GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
